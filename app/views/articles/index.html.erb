@@ -1,0 +1,8 @@
+ <%= render "shared/errors" %>
+<h1 align="center">Articles</h1>
+<hr>
+
+<%= render "article", obj: @articles %>
+<blockquote>
+<h2><%= link_to "New Article", new_article_path %></h2>
+</blockquote>

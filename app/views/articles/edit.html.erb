@@ -1,0 +1,7 @@
+<h1 align="center">Edit article</h1>
+
+<%= render "form", article: @article %>
+    <p><%= link_to "Destroy", article_path(@article), data: {turbo_method: :delete,turbo_confirm: "Are you sure?"} %></p>
+
+
+

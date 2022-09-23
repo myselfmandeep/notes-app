@@ -1,0 +1,14 @@
+<% if @article.new_record? %>
+  <%= render "shared/errors", bounty: @article %>
+<% end %>
+
+<h1 align="center">Show article</h1>
+<div class="container">
+  <div class="col-8 card border-warning">
+    <div align="center" class="card-header"><%= @article.title %></div>
+    <div class="card-body">
+      <h5 class="card-title">Warning card title</h5>
+      <p class="card-text"><%= @article.description %></p>
+    </div>
+    <p><%= link_to "Edit", edit_article_path(@article) %></p>
+    <p><%= link_to "Destroy", article_path(@article), data: {turbo_method: :delete,turbo_confirm: "Are you sure?"} %></p>

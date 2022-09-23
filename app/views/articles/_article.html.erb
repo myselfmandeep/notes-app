@@ -1,0 +1,16 @@
+
+<% obj.each do |article| %>
+  <div>
+    <p class="fw-bolder"><%= article.title %></p>
+  </div>
+  <div>
+    <p><%= article.description %></p>
+  </div>
+    <div>
+    <span>|  <%= link_to "Show", article_path(article) %> |</span>
+    <span><%= link_to "Edit", edit_article_path(article) %> |</span>
+        <span><%= link_to "Destroy", article_path(article), data: {turbo_method: :delete,turbo_confirm: "Are you sure?"} %> |</span>
+
+    </div>   
+    <hr>
+<% end %>
